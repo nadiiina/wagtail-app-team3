@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  wagtail:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      PORT: 8000
+      HOST_NAME: "http://localhost:8000"
+      DATABASE_URL: "YOUR_DATABASE_URL"
+      DJANGO_ALLOWED_HOSTS: "*"
